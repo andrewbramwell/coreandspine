@@ -1,0 +1,71 @@
+---
+title: 'Deep Tissue Massage'
+description: "meta description"
+permalink: false
+
+
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/service-page.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-1399">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <div class="cs-flex">
+                <picture class="cs-background">
+                <!--Mobile Image -->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image -->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image -->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1084, height: 1334}) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1084, height: 1334}) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1084, height: 1334}) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1084, height: 1334}) | jpeg %}" alt="thai massage" width="542" height="728" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+            </div>
+        </div>
+        <div class="cs-content">
+            <h1 class="cs-title">Experience <span class="cs-color">Traditional Thai Massage</span> in Falkirk</h1>
+            <p>Welcome to Falkirk Thai Massage! Immerse yourself in the authentic healing art of Traditional Thai Massage, where centuries-old techniques combine with expert touch to restore balance and vitality to your body and mind.</p>
+            <p>In your session, our skilled therapist uses time-honored techniques including precise pressure points, gentle stretching, and yoga-like movements to create a uniquely therapeutic experience. This dynamic treatment helps release tension, enhance flexibility, and restore energy flow throughout your body, delivering both immediate relief and long-lasting benefits.</p>
+            <p>Our Traditional Thai Massage is perfect for those seeking a holistic approach to wellness. Often described as 'passive yoga', this treatment helps improve flexibility, relieve muscle tension, and boost energy levels. Whether you're dealing with specific areas of tension, seeking to improve your range of motion, or looking to maintain overall wellness, this authentic Thai massage experience offers profound benefits for body and spirit.</p>
+            <h3>Discover the Falkirk Thai Massage Difference</h3>
+            <ul>
+                <li>
+                    <strong>Authentic Thai Heritage:</strong> Experience genuine Thai massage techniques passed down through generations, delivered with expertise and respect for tradition.
+                </li>
+                <li>
+                    <strong>Enhanced Flexibility:</strong> Benefit from our unique combination of stretching and pressure point work, designed to improve your range of motion and overall flexibility.
+                </li>
+                <li>
+                    <strong>Energy Flow Optimization:</strong> Traditional techniques work along the body's energy lines to restore balance and promote natural healing processes.
+                </li>
+                <li>
+                    <strong>Comprehensive Treatment:</strong> Our full-body approach addresses both specific areas of tension and overall wellness, providing complete therapeutic benefits.
+                </li>
+                <li>
+                    <strong>Adaptive Techniques:</strong> Each session is carefully adapted to your flexibility level and specific needs, ensuring both comfort and optimal therapeutic results.
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

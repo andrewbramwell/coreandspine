@@ -1,0 +1,33 @@
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+
+<section id="cta-403">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Portfolio</span>
+            <h2 class="cs-title">Want to Work with Our Team?</h2>
+            <p class="cs-text">
+                We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.
+            </p>
+            <a href="{{client.onlineBooking}}" target="_blank" rel="noopener" class="cs-button-solid">Book Now</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image -->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 640, height: 770}) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 640, height: 770}) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 640, height: 770}) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image -->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1600, height: 1064}) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1600, height: 1064}) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1600, height: 1064}) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image -->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1600, height: 1064}) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1600, height: 1064}) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1600, height: 1064}) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl "/assets/images/cta.jpg" | resize({width: 1600, height: 1064}) | jpeg %}" alt="shop" width="800" height="532" loading="lazy" decoding="async" aria-hidden="true">
+    </picture>
+</section>
+                                

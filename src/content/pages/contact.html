@@ -1,0 +1,97 @@
+---
+title: 'Contact | Chokdee Thai Therapy'
+description: 'Book your Thai massage appointment today. Free parking, Wi-Fi & refreshments. Professional massage in Normanton, West Yorkshire.'
+permalink: 'contact/'
+eleventyNavigation:
+    key: Contact Us
+    order: 600
+    hideOnDesktop: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+{% endblock %}
+
+{% block body %}
+                                
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1403">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Get in Touch</h2>
+            <p class="cs-text">
+                Book your authentic Thai massage appointment today. Call, visit, or enquire online for professional therapeutic treatments in Normanton.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="/assets/svgs/phone.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:{{client.phoneForTel}}
+                        " class="cs-link">{{client.phoneFormatted}}
+                        </a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="/assets/svgs/clock.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Opening Hours</span>
+                        <a href="{{client.address.mapLink}}" target="_blank" rel="noopener" class="cs-link">{{client.openingHours}}</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="/assets/svgs/pin.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Address</span>
+                        <a href="{{client.address.mapLink}}" target="_blank" rel="noopener" class="cs-link">{{client.address.lineOne}}, {{client.address.city}}, {{client.address.zip}}</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-1403" name="Contact Form" method="post" data-netlify="true"><input type='hidden' name='form-name' value='Contact Form' />
+            <h3 class="cs-h3">Send a Message</h3>
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-1403" name="name" placeholder="Name">
+            </label>
+            <label class="cs-label cs-email">
+                Email
+                <input class="cs-input" required type="email" id="email-1403" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label cs-phone">
+                Phone
+                <input class="cs-input" required type="number" id="phone-1403" name="phone" placeholder="Phone">
+            </label>
+            <label class="cs-label">
+                Message
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-1403" placeholder="Write message..."></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--          Google Map Iframe Embed             -->
+<!-- ============================================ -->
+
+<section id="map-1403">
+    <!--Replace this embed code with the google maps embed code of your clients location. To do so, google your clients business, click on the map picture that in the profile card to go to the map location. That will take you to Google maps, then find the share button in the left panel and click on it. You will be given a link to share and a button to copy link, ignore that! AAbove that is a tab that says "Embed a map", click that instead and it will bring up the embed code for you clients location in maps.  Click the button to copy the html and paste it in place of this entire iframe tag. Do not keep the original iframe. Replace it with the new one you got from google maps, unless you want to display a map of Wyoming, then you can keep this iframe. -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2362.156606426086!2d-1.4217292999999998!3d53.69765539999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487969701e16c66b%3A0x71db66af1fc3ecaa!2sChokdee%20Thai%20Therapy!5e0!3m2!1sen!2suk!4v1749907959663!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+                                
+{% endblock %}

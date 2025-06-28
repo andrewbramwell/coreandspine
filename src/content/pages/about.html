@@ -1,0 +1,68 @@
+---
+title: 'About | Chokdee Thai Therapy'
+description: 'Meet Jay - Thai massage therapist from Buriram Province, Thailand with 10+ years UK experience & a background in healthcare.'
+permalink: 'about/'
+eleventyNavigation:
+    key: About Us
+    order: 200
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-2374">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Story</span>
+            <h2 class="cs-title">About Chokdee Thai Therapy</h2>
+            <p class="cs-text">
+                Meet Jay, your qualified Thai massage therapist with over 18 years UK experience. Combining traditional Thai techniques with modern professional standards for authentic therapeutic healing.
+            </p>
+        </div>
+        <div class="cs-flex">
+            <div class="cs-content2">
+                <p class="cs-text">
+                    Jay brings authentic Thai healing traditions from Northeastern Thailand, a region renowned for its traditional massage techniques passed down through generations. Having relocated to the UK in 2007, she has spent 18 years perfecting her craft whilst maintaining the cultural authenticity that makes Thai massage so uniquely therapeutic.
+                </p>
+                 <p class="cs-text">
+                    With over 10 years of professional massage experience in the UK, Jay holds recognised qualifications and comprehensive insurance coverage. Her unique background also includes healthcare work, providing her with invaluable insight into patient care and professional hygiene standards that few massage therapists possess.
+                </p>
+                 <p class="cs-text">
+                    As a dedicated sole practitioner, Jay established Chokdee Thai Therapy to provide genuine therapeutic care rather than simple relaxation. Her specialities include pain relief, body detoxification, and stress reduction, using traditional family methods combined with modern professional equipment and hospital-standard cleanliness protocols.
+                </p>
+                 <p class="cs-text">
+                    Every client receives personalised attention on professional-grade equipment with fresh linens and towels. Jay continuously monitors comfort levels during treatments, ensuring each session addresses individual needs. Her commitment extends beyond the massage table, with comprehensive aftercare advice and a welcoming environment featuring free parking, refreshments, and Wi-Fi for complete client convenience.
+                </p>
+            </div>
+            <picture class="cs-picture">
+                    <!--Mobile Image -->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 448, height: 480}) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 448, height: 480}) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 448, height: 480}) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image -->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 776, height: 820}) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 776, height: 820}) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 776, height: 820}) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image -->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1056, height: 812}) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1056, height: 812}) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1056, height: 812}) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1056, height: 812}) | jpeg %}" alt="image description" width="528" height="406" loading="lazy" decoding="async">
+            </picture>
+        </div>
+    </div>
+</section>
+                                
+
+
+{% endblock %}

@@ -1,0 +1,71 @@
+<!-- ============================================ -->
+<!--                  Side By Side                -->
+<!-- ============================================ -->
+
+<section id="sbs-2377">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 576, height: 576}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 576, height: 576}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 576, height: 576}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1168, height: 800}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1168, height: 800}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1168, height: 800}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1260, height: 922}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1260, height: 922}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1260, height: 922}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1260, height: 922}) | jpeg %}" alt="why us image" width="630" height="461" loading="lazy" decoding="async">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Why Us</span>
+            <h2 class="cs-title">Why Choose Chokdee Thai Therapy</h2>
+            <p class="cs-text">
+                Authentic healing meets professional excellence. Experience the difference of traditional techniques, modern standards, and personalised care in our welcoming Normanton practice.
+            </p>
+            <a href="/about/" class="cs-button-solid">About Chokdee</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-2377">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/therapy1.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">Licensed Expertise</h3>
+                <p class="cs-item-text">
+                    Qualified therapist with recognised certifications and comprehensive insurance.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/therapy2.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">Easy Booking</h3>
+                <p class="cs-item-text">
+                    Easy online booking and flexible scheduling to suit your needs.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/therapy3.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">Goal-Oriented</h3>
+                <p class="cs-item-text">
+                    Therapeutic focus on pain relief, detoxification, and stress reduction.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/therapy4.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">Client-First Experience</h3>
+                <p class="cs-item-text">
+                    Fresh linens, professional equipment, free parking, and refreshments provided.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+                                

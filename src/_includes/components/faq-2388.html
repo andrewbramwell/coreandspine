@@ -1,0 +1,95 @@
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-2388">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <div class="cs-subscribe">
+                <h3 class="cs-h3">Stay Connected</h3>
+                <p class="cs-text">
+                    Subscribe for wellness tips, special offers, and appointment reminders delivered to your inbox.
+                </p>
+                <form class="cs-form" name="Subscribe Form" method="post">
+                    <input class="cs-input" type="email" id="cs-email-1506-2388" name="find-us" placeholder="Email Address">
+                    <button class="cs-button-solid cs-submit" type="submit">Subscribe</button>
+                </form>
+            </div>
+            <img class="cs-grpahic" loading="lazy" decoding="async" src="/assets/svgs/hand2.svg" alt="hand graphic" width="519" height="335" aria-hidden="true">
+            <img class="cs-blur" loading="lazy" decoding="async" src="/assets/svgs/flower-short2.svg" alt="flower graphic" width="543" height="428" aria-hidden="true">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What should I expect during my first massage appointment?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Arrive 10 minutes early to complete a brief health questionnaire. Your therapist will discuss your needs, explain the treatment, and ensure you're comfortable throughout the session.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How often should I book massage treatments?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        For general wellness, monthly sessions work well. For chronic pain or specific issues, weekly or fortnightly appointments may be more beneficial initially.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What facilities and amenities do you provide?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        We offer free parking directly outside, separate toilet facilities, complimentary Wi-Fi, and free refreshments including water, herbal tea, and coffee.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What are your opening hours?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Monday to Friday: 10am-7pm, Saturday: 3:30pm-7pm. We're closed Sundays. Book online or call to secure your preferred appointment time.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do I need to prepare anything before my massage?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Please avoid eating for at least one hour before your appointment. Wear comfortable clothing and arrive relaxed. We provide fresh towels and all necessary oils.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+for (const item of faqItems) {
+	const onClick = () => {
+		item.classList.toggle('active');
+	};
+	item.addEventListener('click', onClick);
+}
+</script>
+                                

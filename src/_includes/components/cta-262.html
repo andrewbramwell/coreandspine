@@ -1,0 +1,39 @@
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+
+<section id="cta-262">
+    <div class="cs-container">
+        <div class="cs-left-section">
+            <h2 class="cs-title">Schedule Your Next Checkup With Us</h2>
+            <a href="{{client.onlineBooking}}" target="_blank" rel="noopener" class="cs-button-solid">Request Appointment</a>
+        </div>
+        <div class="cs-content">
+            <span class="cs-header">Available Hours</span>
+            <p class="cs-p"> 
+                Tuesday, Thursday, Friday: 9am-6pm<br>
+                ​(closed for lunch 12pm-2pm)
+            </p>
+            <p class="cs-p">
+                Appointments Preferred, Walk-Ins Welcome.<br>
+                Saturdays by Appointment Only.
+            </p>
+        </div>
+        <picture class="cs-background">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 576, height: 852}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 576, height: 852}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 576, height: 852}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1280, height: 902}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1280, height: 902}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1280, height: 902}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1280, height: 902}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1280, height: 902}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta.jpg" | resize({width: 1280, height: 902}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/cta.jpg" | resize({width: 1280, height: 902}) | jpeg %}" alt="shop" width="1280" height="902" loading="lazy" decoding="async" aria-hidden="true">
+        </picture>
+    </div>
+</section>
+                                
