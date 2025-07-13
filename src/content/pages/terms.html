@@ -1,0 +1,81 @@
+---
+title: 'Terms & Conditions| Spine & Core Synergy'
+description: ''
+permalink: 'terms/'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/policy.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+{% endblock %}
+
+{% block body %}
+
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1519">
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner-1-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner-1.webp">
+        <img decoding="async" src="/assets/images/banner-1.jpg" alt="woman getting a massage" width="1280" height="568" aria-hidden="true">
+    </picture>
+    <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--maskBG)"/>
+    </svg>
+</div>
+                                
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->                      
+
+<section id="content-page-1535">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Terms and Conditions for <span class="cs-color">Spine and Core Synergy</span></h1>
+            <h2>Your Agreement with Us</h2>
+            <p>
+                These terms and conditions govern your use of our services and website at Spine and Core Synergy. By booking an appointment or using our services, you agree to be bound by these terms. Please read them carefully before proceeding.
+            </p>
+            <p>
+                These terms were last updated on <strong>[Date]</strong> and may be modified from time to time. Continued use of our services constitutes acceptance of any updated terms.
+            </p>
+            
+            <h3>Appointment and Booking Terms</h3>
+            <ol>
+                <li>Appointments must be booked in advance and are subject to availability</li>
+                <li>24-hour notice is required for cancellations to avoid charges</li>
+                <li>Late arrivals may result in shortened treatment time</li>
+                <li>Payment is due at the time of service unless prior arrangements are made</li>
+            </ol>
+            
+            <h4>Treatment and Professional Standards</h4>
+            <p>
+                All treatments are provided by qualified healthcare professionals registered with appropriate regulatory bodies. We maintain professional standards in accordance with industry guidelines and will always act in your best interests regarding your health and safety.
+            </p>
+            
+            <h3>Liability and Disclaimer</h3>
+            <ul>
+                <li>Treatment outcomes cannot be guaranteed and may vary between individuals</li>
+                <li>You must disclose relevant medical history and current health conditions</li>
+                <li>We maintain professional indemnity insurance for all services provided</li>
+                <li>Our liability is limited to the cost of the treatment provided</li>
+            </ul>
+            
+            <h4>Governing Law</h4>
+            <p>
+                These terms and conditions are governed by English law and are subject to the exclusive jurisdiction of the English courts. If you have any questions about these terms, please contact us at [contact information] before using our services.
+            </p>
+        </div>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+{% endblock %}

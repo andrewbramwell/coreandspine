@@ -7,7 +7,7 @@
     padding: var(--sectionPadding);
     /* 48px - 64px */
     padding-bottom: clamp(2.5rem, 6vw, 4rem);
-    background-color: var(--sectionColor2);
+    background-color: var(--physioSectionColor);
     position: relative;
     z-index: 1;
   }
@@ -127,7 +127,7 @@
   #services-2377 {
     padding: var(--sectionPadding);
     padding-top: 0;
-    background-color: var(--sectionColor2);
+    background-color: var(--physioSectionColor);
   }
   #services-2377 .cs-container {
     width: 100%;
@@ -228,13 +228,13 @@
   }
 }
 /*-- -------------------------- -->
-<---     Side By SIde Pair      -->
+<---     Side By Side Pair      -->
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   #sbs-2375 {
     padding: var(--sectionPadding);
-    background-color: var(--sectionColor);
+    background-color: var(--physioSectionColor);
     box-sizing: border-box;
   }
   #sbs-2375 .cs-container {
@@ -283,7 +283,7 @@
     /* 16px - 32px left & right */
     padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 2rem);
     box-sizing: border-box;
-    background-color: var(--sectionColor);
+    background-color: var(--physioSectionColor);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -434,21 +434,9 @@
 @media only screen and (min-width: 0rem) {
   #reviews-2386 {
     padding: var(--sectionPadding);
-    background-color: #fff;
+    background-color: var(--physioSectionColor);
     position: relative;
     z-index: 1;
-  }
-  #reviews-2386:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: var(--primary);
-    opacity: 0.05;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
   }
   #reviews-2386 .cs-container {
     width: 100%;
@@ -510,8 +498,7 @@
     content: '';
     width: 100%;
     height: 100%;
-    background: var(--primary);
-    opacity: 0.05;
+    background: var(--physioSectionColor);
     display: block;
     position: absolute;
     top: 0;
@@ -680,7 +667,7 @@
 @media only screen and (min-width: 0rem) {
   #faq-2388 {
     padding: var(--sectionPadding);
-    background-color: var(--sectionColor2);
+    background-color: var(--physioSectionColor);
     position: relative;
   }
   #faq-2388 .cs-container {
@@ -999,5 +986,389 @@
   body.dark-mode #faq-2388 .cs-button .cs-indicator:before,
   body.dark-mode #faq-2388 .cs-button .cs-indicator:after {
     background-color: var(--bodyTextColorWhite);
+  }
+}
+/*-- -------------------------- -->
+<---            Meet            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-2419 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #meet-2419:before {
+    /* background color */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--physioSectionColor);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #meet-2419 .cs-container {
+    text-align: center;
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #meet-2419 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #meet-2419 .cs-title {
+    max-width: 25ch;
+  }
+  #meet-2419 .cs-text {
+    max-width: 46.625rem;
+  }
+  #meet-2419 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  #meet-2419 .cs-item {
+    list-style: none;
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    position: relative;
+  }
+  #meet-2419 .cs-item:hover .cs-name {
+    color: var(--primary);
+  }
+  #meet-2419 .cs-image-group {
+    width: 100%;
+    /* switches to clamp at tablet */
+    height: 58vw;
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #meet-2419 .cs-graphic {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    /* 40px - 60px */
+    top: clamp(2.5rem, 4vw, 3.75rem);
+    left: 0;
+  }
+  #meet-2419 .cs-picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  #meet-2419 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #meet-2419 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 1.9vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    color: var(--headerColor);
+    display: block;
+    transition: color 0.3s;
+  }
+  #meet-2419 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-2419 .cs-container {
+    max-width: 80rem;
+  }
+  #meet-2419 .cs-card-group {
+    align-items: flex-start;
+  }
+  #meet-2419 .cs-item {
+    grid-column: span 4;
+  }
+  #meet-2419 .cs-image-group {
+    /* 142px - 263px */
+    height: clamp(8.875rem, 19vw, 16.4375rem);
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #meet-2419:before {
+    background-color: #000;
+    opacity: 0.2;
+  }
+  body.dark-mode #meet-2419 .cs-title,
+  body.dark-mode #meet-2419 .cs-text,
+  body.dark-mode #meet-2419 .cs-name {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #meet-2419 .cs-graphic {
+    filter: grayscale(1) brightness(500%);
+    opacity: 0.5;
+  }
+  body.dark-mode #meet-2419 .cs-job {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+}
+/*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2369 {
+    padding: var(--sectionPadding);
+    padding-bottom: 0;
+    background: var(--physioSectionColor);
+    /* clips anything overflowing */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 49rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-2369 .cs-wrapper {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sbs-2369 .cs-content {
+    /* set text align to center if content needs to be centered */
+    text-align: left;
+    width: 100%;
+    max-width: 43.375rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* left aligns content, set to center to align content horizontally */
+    align-items: flex-start;
+  }
+  #sbs-2369 .cs-header {
+    /* 20px - 31px */
+    font-size: clamp(1.25rem, 3vw, 1.9375rem);
+    text-align: center;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    color: var(--headerColor);
+  }
+  #sbs-2369 .cs-arrow {
+    width: 9.625rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+  #sbs-2369 .cs-topper {
+    text-align: center;
+    margin: auto;
+  }
+  #sbs-2369 .cs-title {
+    text-align: center;
+    max-width: 20ch;
+    margin: auto;
+    margin-bottom: 2rem;
+    /* 48px - 64px */
+    padding-bottom: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-title:before {
+    content: '';
+    width: 100vw;
+    height: 1px;
+    background: #D2D8DF;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #sbs-2369 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-2369 .cs-text:last-of-type {
+    /* 24px - 32px */
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+  #sbs-2369 .cs-ul {
+    width: 100%;
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #sbs-2369 .cs-li {
+    font-size: var(--bodyFontSize);
+    list-style: none;
+    line-height: 1.5em;
+    width: 100%;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #sbs-2369 .cs-icon {
+    width: 1.1875rem;
+    height: auto;
+    /* adds extra space between the icon and top of parent so it's more centered */
+    margin-top: 3px;
+    display: block;
+    flex: none;
+  }
+  #sbs-2369 .cs-image-group {
+    /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+    font-size: min(2.8vw, .75rem);
+    /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+    width: 32.625em;
+    height: auto;
+    order: 2;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-picture {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #sbs-2369 .cs-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #sbs-2369 .cs-flower {
+    width: 75em;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+}
+/* Large Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+  #sbs-2369 {
+    padding: var(--sectionPadding);
+    padding-bottom: 0;
+  }
+  #sbs-2369 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-content {
+    width: 50%;
+    padding-bottom: clamp(3.75rem, 7.82vw, 6.25rem);
+    align-items: flex-start;
+  }
+  #sbs-2369 .cs-topper,
+  #sbs-2369 .cs-title {
+    text-align: left;
+    margin: 0;
+  }
+  #sbs-2369 .cs-topper {
+    margin-bottom: 0.25rem;
+  }
+  #sbs-2369 .cs-title {
+    margin-bottom: 2rem;
+  }
+  #sbs-2369 .cs-image-group {
+    /* set to inherit at Large Desktop */
+    font-size: min(1.2vw, 1rem);
+    height: auto;
+    order: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  #sbs-2369 .cs-picture {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2369 .cs-picture img {
+    height: 100%;
+    width: auto;
+  }
+  #sbs-2369 .cs-flower {
+    width: 80vw;
+    max-width: 56.25rem;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #sbs-2369 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #sbs-2369 .cs-title,
+  body.dark-mode #sbs-2369 .cs-text,
+  body.dark-mode #sbs-2369 .cs-header,
+  body.dark-mode #sbs-2369 .cs-li {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs-2369 .cs-title:before {
+    opacity: 0.2;
+  }
+  body.dark-mode #sbs-2369 .cs-text,
+  body.dark-mode #sbs-2369 .cs-li {
+    opacity: 0.8;
+  }
+  body.dark-mode #sbs-2369 .cs-wheel {
+    filter: grayscale(1) brightness(1000%) opacity(0.3);
   }
 }

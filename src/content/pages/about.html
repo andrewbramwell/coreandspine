@@ -1,67 +1,146 @@
 ---
-title: 'About | Chokdee Thai Therapy'
-description: 'Meet Jay - Thai massage therapist from Buriram Province, Thailand with 10+ years UK experience & a background in healthcare.'
+title: 'About | Spine & Core Synergy'
+description: ''
 permalink: 'about/'
 eleventyNavigation:
     key: About Us
-    order: 200
+    order: 300
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/about.css">
+     <link rel="stylesheet" href="/assets/css/components.css">
     <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
 {% endblock %}
 
 {% block body %}
 
+
 <!-- ============================================ -->
-<!--             Side By Side Reverse             -->
+<!--                   Banner                     -->
 <!-- ============================================ -->
 
-<section id="sbsr-2374">
+<div id="banner-1519">
     <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Our Story</span>
-            <h2 class="cs-title">About Chokdee Thai Therapy</h2>
-            <p class="cs-text">
-                Meet Jay, your qualified Thai massage therapist with over 18 years UK experience. Combining traditional Thai techniques with modern professional standards for authentic therapeutic healing.
-            </p>
+        <span class="cs-int-title">About Us</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/about/" class="cs-link cs-active">About</a>
         </div>
-        <div class="cs-flex">
-            <div class="cs-content2">
-                <p class="cs-text">
-                    Jay brings authentic Thai healing traditions from Northeastern Thailand, a region renowned for its traditional massage techniques passed down through generations. Having relocated to the UK in 2007, she has spent 18 years perfecting her craft whilst maintaining the cultural authenticity that makes Thai massage so uniquely therapeutic.
-                </p>
-                 <p class="cs-text">
-                    With over 10 years of professional massage experience in the UK, Jay holds recognised qualifications and comprehensive insurance coverage. Her unique background also includes healthcare work, providing her with invaluable insight into patient care and professional hygiene standards that few massage therapists possess.
-                </p>
-                 <p class="cs-text">
-                    As a dedicated sole practitioner, Jay established Chokdee Thai Therapy to provide genuine therapeutic care rather than simple relaxation. Her specialities include pain relief, body detoxification, and stress reduction, using traditional family methods combined with modern professional equipment and hospital-standard cleanliness protocols.
-                </p>
-                 <p class="cs-text">
-                    Every client receives personalised attention on professional-grade equipment with fresh linens and towels. Jay continuously monitors comfort levels during treatments, ensuring each session addresses individual needs. Her commitment extends beyond the massage table, with comprehensive aftercare advice and a welcoming environment featuring free parking, refreshments, and Wi-Fi for complete client convenience.
-                </p>
-            </div>
-            <picture class="cs-picture">
-                    <!--Mobile Image -->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 448, height: 480}) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 448, height: 480}) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 448, height: 480}) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image -->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 776, height: 820}) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 776, height: 820}) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 776, height: 820}) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image -->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1056, height: 812}) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1056, height: 812}) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1056, height: 812}) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/owner-1.jpg" | resize({width: 1056, height: 812}) | jpeg %}" alt="image description" width="528" height="406" loading="lazy" decoding="async">
-            </picture>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner-1-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/clinic.jpg">
+        <img decoding="async" src="/assets/images/banner-1.jpg" alt="woman getting a massage" width="1280" height="568" aria-hidden="true">
+    </picture>
+    <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--maskBG)"/>
+    </svg>
+</div>
+                                
+
+
+<!-- ============================================ -->
+<!--                  Side By Side                -->
+<!-- ============================================ -->
+
+<section id="sbs-2377">
+    <div class="cs-container">
+       <picture class="cs-picture">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 576, height: 576}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 576, height: 576}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 576, height: 576}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1168, height: 800}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1168, height: 800}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1168, height: 800}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1260, height: 1296}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1260, height: 1296}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1260, height: 1296}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/mission.jpg" | resize({width: 1260, height: 1296}) | jpeg %}" alt="mission" width="630" height="648" loading="lazy" decoding="async" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Our Values</span>
+            <h2 class="cs-title">Leading Women's Clinic in Ayelsbury</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor.
+            </p>
+             <p class="cs-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor.
+            </p>
+             <p class="cs-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor.
+            </p>
+            <a href="{{client.onlineBooking}}" target="_blank" rel="noopener" class="cs-button-solid">Request Appointment</a>
         </div>
     </div>
 </section>
+
+<!-- ============================================ -->
+<!--                  Side By Side                -->
+<!-- ============================================ -->
+
+<section id="sbs-2378">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 576, height: 576}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 576, height: 576}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 576, height: 576}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1168, height: 800}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1168, height: 800}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1168, height: 800}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1260, height: 1296}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1260, height: 1296}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/mission.jpg" | resize({width: 1260, height: 1296}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/mission.jpg" | resize({width: 1260, height: 1296}) | jpeg %}" alt="mission" width="630" height="648" loading="lazy" decoding="async" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Mission</span>
+            <h2 class="cs-title">What Makes Us Different</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor.
+            </p>
+             <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/swirl.svg" alt="checkmark" width="24" height="24">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/swirl.svg" alt="checkmark" width="24" height="24">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/swirl.svg" alt="checkmark" width="24" height="24">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </li>
+                    </ul>
+            <a href="" class="cs-button-solid">Start Your Journey Today</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+{% include 'components/team-2419.html' %}
+
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+                                
+{% include 'components/cta-2372.html' %}          
+
                                 
 
 

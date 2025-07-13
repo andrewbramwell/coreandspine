@@ -1,0 +1,81 @@
+---
+title: 'Privacy Policy | Spine & Core Synergy'
+description: ''
+permalink: 'privacy/'
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/policy.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1519">
+    
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner-1-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner-1.webp">
+        <img decoding="async" src="/assets/images/banner-1.jpg" alt="woman getting a massage" width="1280" height="568" aria-hidden="true">
+    </picture>
+    <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--maskBG)"/>
+    </svg>
+</div>
+                                
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->                      
+
+<section id="content-page-1535">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Privacy Policy for <span class="cs-color">Spine and Core Synergy</span></h1>
+            <h2>Your Privacy Matters to Us</h2>
+            <p>
+                At Spine and Core Synergy, we are committed to protecting your personal information and respecting your privacy. This policy explains how we collect, use, and safeguard your data when you use our services or visit our website.
+            </p>
+            <p>
+                We comply with the UK General Data Protection Regulation (GDPR) and Data Protection Act 2018. This policy was last updated on <strong>[Date]</strong> and may be revised from time to time.
+            </p>
+            
+            <h3>Information We Collect</h3>
+            <ol>
+                <li>Personal details including name, address, phone number, and email address</li>
+                <li>Medical history and health information relevant to your treatment</li>
+                <li>Appointment details and treatment records</li>
+                <li>Payment information for billing purposes</li>
+            </ol>
+            
+            <h4>How We Use Your Information</h4>
+            <p>
+                We use your personal information solely to provide you with the best possible care. This includes scheduling appointments, maintaining treatment records, processing payments, and communicating with you about your health and wellness journey.
+            </p>
+            
+            <h3>Data Security and Storage</h3>
+            <ul>
+                <li>All personal data is stored securely using encrypted systems and password protection</li>
+                <li>Access to your information is restricted to authorized personnel only</li>
+                <li>We retain records in accordance with professional healthcare guidelines</li>
+                <li>Your data is never shared with third parties without your explicit consent</li>
+            </ul>
+            
+            <h4>Your Rights</h4>
+            <p>
+                You have the right to access, update, or request deletion of your personal information. You may also withdraw consent for data processing at any time. To exercise these rights or if you have any privacy concerns, please contact us at [contact information].
+            </p>
+        </div>
+    </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+{% endblock %}

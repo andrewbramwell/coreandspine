@@ -1,0 +1,359 @@
+---
+title: 'Pilates | Spine & Core Synergy | Aylesbury'
+description: ''
+permalink: 'pilates/'
+eleventyNavigation:
+  key: Pilates
+  order: 3200
+  parent: Treatments
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/pilates.css"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-3.jpg" | resize({width: 1260, height: 1530}) | avif %}">
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+
+    <!-- JSON Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+            {% if client.email %}"email": "{{ client.email }}",{% endif %}
+            {% if client.address %}
+                "address": {
+                    "@type": "PostalAddress"{% if client.address.lineOne %},
+                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                    {% endif %}
+                    {% if client.address.city %},
+                        "addressLocality": "{{ client.address.city }}"
+                    {% endif %}
+                    {% if client.address.state %},
+                        "addressRegion": "{{ client.address.state }}"
+                    {% endif %}
+                    {% if client.address.zip %},
+                        "postalCode": "{{ client.address.zip }}"
+                    {% endif %}
+                    {% if client.address.country %},
+                        "addressCountry": "{{ client.address.country }}"
+                    {% endif %}
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if client.socials %}
+                "sameAs": [{% for platform, url in client.socials %}
+                        {% if not loop.first %},{% endif %}
+                        "{{ url }}"
+                    {% endfor %}]
+            {% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1469">
+    <div class="cs-container">
+        <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Pilates</span>
+            <h1 class="cs-title">Womens Pilates Classes in Ayelsbury</h1>
+            <p class="cs-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor.
+            </p>
+            <a href="" class="cs-button-solid">Get Started</a>
+        </div>
+    </div>
+    </div>
+    <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/hero-p.webp">
+        <source media="(min-width: 601px)" srcset="/assets/images/hero-p-m.webp">
+        <img decoding="async" src="/assets/images/hero-p1.jpg" alt="pilates class" width="2250" height="1500" aria-hidden="true">
+    </picture>
+    <!--SVG Curve-->
+    <svg class="cs-curve" width="1920" height="136" viewBox="0 0 1920 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="var(--pilatesSectionColor)"/>
+    </svg>
+</section>
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->                      
+
+<section id="content-page-1535">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image -->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 1044, height: 1080}) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 1044, height: 1080}) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 1044, height: 1080}) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image -->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 712, height: 898}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 712, height: 898}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 712, height: 898}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image -->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 1044, height: 1080}) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 1044, height: 1080}) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/policy.jpg" | resize({width: 1044, height: 1080}) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/policy.jpg" | resize({width: 1044, height: 1080}) | jpeg %}" alt="policy image" width="522" height="540" loading="lazy" decoding="async">
+            </picture>
+            <!--Floating Blob-->
+            <img class="cs-floater" src="/assets/svgs/blob-p.svg" alt="graphic" loading="lazy" decoding="async" height="710" width="690">
+        </div>
+            <div class="cs-content">
+                <h1 class="cs-title">Pilates for <span class="cs-color">Strength and Stability</span></h1>
+                <h2>Building Your Foundation for Confident Movement</h2>
+                <p>
+                    At Spine and Core Synergy, our Pilates classes are designed specifically for women seeking to build core strength, improve posture, and enhance overall body awareness. Our approach combines traditional Pilates principles with modern movement science to create sessions that support your individual health and wellness goals.
+                </p>
+                <p>
+                    Whether you're new to Pilates or returning after a break, our classes focus on <strong>controlled, mindful movement</strong> that strengthens your deep stabilising muscles while improving flexibility and coordination. Each session is tailored to meet you where you are in your fitness journey.
+                </p>
+                
+                <h3>Benefits of Pilates for Women's Health</h3>
+                <ol>
+                    <li>Enhanced core strength and stability for better posture and reduced back pain</li>
+                    <li>Improved flexibility and mobility supporting daily activities and active living</li>
+                    <li>Better body awareness and movement quality for injury prevention</li>
+                    <li>Stress relief and mental wellbeing through mindful, focused movement</li>
+                </ol>
+                
+                <h4>Your First Pilates Session</h4>
+                <p>
+                    Your initial consultation includes an assessment of your movement patterns, any physical limitations, and your personal goals. We'll introduce you to fundamental Pilates principles and ensure you feel comfortable and confident before progressing to more challenging exercises. This personalised approach ensures safe, effective practice from day one.
+                </p>
+                
+                <h3>What Our Pilates Classes Include</h3>
+                <ul>
+                    <li>Core strengthening exercises targeting deep abdominal and back muscles</li>
+                    <li>Posture improvement techniques for workplace and daily life</li>
+                    <li>Breathing coordination and relaxation methods for stress management</li>
+                    <li>Progressive exercises that adapt to your developing strength and ability</li>
+                </ul>
+            </div>
+        </div>
+    <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Why Us 1                  -->
+<!-- ============================================ -->
+
+<section id="sbs-2377">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 576, height: 576}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 576, height: 576}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 576, height: 576}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 1168, height: 800}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 1168, height: 800}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 1168, height: 800}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 1260, height: 922}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 1260, height: 922}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/pilates.jpg" | resize({width: 1260, height: 922}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/pilates.jpg" | resize({width: 1260, height: 922}) | jpeg %}" alt="pilates" width="630" height="461" loading="lazy" decoding="async">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Why Us</span>
+            <h2 class="cs-title">Why Choose Pilates at Spine and Core Synergy?</h2>
+            <p class="cs-text">
+                Our Pilates classes complement our chiropractic and physiotherapy services, creating a complete wellness approach that addresses movement, strength, and stability. This integrated model ensures your Pilates practice supports your overall treatment goals, helping you maintain the benefits of your therapeutic treatments while building long-term resilience.
+            </p>
+            <a href="" class="cs-button-solid">Start Your Journey Today</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Why Us 2                   -->
+<!-- ============================================ -->
+
+<section id="services-2377">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/p1.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">Licensed Expertise</h3>
+                 <p class="cs-item-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/p2.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">Easy Booking</h3>
+                <p class="cs-item-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/p3.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">Goal-Oriented</h3>
+                 <p class="cs-item-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/p4.svg" alt="icon" width="120" height="120">
+                <h3 class="cs-h3">Client-First Experience</h3>
+                 <p class="cs-item-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Pricing                    -->
+<!-- ============================================ -->
+
+<section id="pricing-2383">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Pricing</span>
+            <h2 class="cs-title">Treatment Packages and Pricing</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-wrapper">
+                    <div class="cs-flex">
+                        <h3 class="cs-package">Therapy 1</h3>
+                        <span class="cs-price">£60</span>
+                        <span class="cs-desc">
+                            per session
+                        </span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus sit laboriosam ratione veritatis.
+                    </p>
+                    <a href="" class="cs-button-solid cs-price-button">Book a Session</a>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image -->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image -->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image -->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | jpeg %}" alt="price background" width="414" height="268" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item cs-popular">
+                <div class="cs-wrapper">
+                    <div class="cs-flex">
+                        <h3 class="cs-package">Therapy 2</h3>
+                        <span class="cs-price">£60</span>
+                        <span class="cs-desc">
+                            per session
+                        </span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus sit laboriosam ratione veritatis.
+                    </p>
+                    <a href="" class="cs-button-solid cs-price-button">Book a Session</a>
+                </div>
+               <picture class="cs-picture">
+                    <!--Mobile Image -->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image -->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image -->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | jpeg %}" alt="price background" width="414" height="268" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-wrapper">
+                    <div class="cs-flex">
+                        <h3 class="cs-package">Therapy 3</h3>
+                        <span class="cs-price">£60</span>
+                        <span class="cs-desc">
+                            per session
+                        </span>
+                    </div>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus sit laboriosam ratione veritatis.
+                    </p>
+                    <a href="" class="cs-button-solid cs-price-button">Book a Session</a>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image -->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 576, height: 536}) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image -->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 638, height: 536}) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image -->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/blob-p.png" | resize({width: 828, height: 536}) | jpeg %}" alt="price background" width="414" height="268" loading="lazy" decoding="async" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Call To Action                -->
+<!-- ============================================ -->
+
+<section id="cta-2372">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Start Your Journey Towards Wellness Today</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem, ipsum dolor.
+            </p>
+            <a href="{{client.onlineBooking}}" target="_blank" rel="noopener" class="cs-button-solid">Book Now</a>
+        </div>
+        <img class="cs-graphic" src="/assets/svgs/healing-hands.svg" alt="graphic" loading="lazy" decoding="async" width="490" height="451">
+        <img class="cs-floater" loading="lazy" decoding="async" src="/assets/svgs/flower2.svg" alt="flower blur" width="851" height="991" aria-hidden="true">
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,1326 @@
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-1469 {
+	    /* 200px - 288px - leaving extra space for the navigation */
+        padding: clamp(12.5rem, 29.95vw, 18rem) (16/16rem) 0;
+        /* 100px - 288px */
+        padding-bottom: clamp(6.25rem, 20vw, 18rem);
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: #e5f3f1;
+            opacity: .9;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: (616/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.40vw, 3.8125rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: inherit;
+            max-width: 20ch;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+            position: relative;
+        }
+
+        .cs-text {
+            /* 16px - 24px */
+            font-size: clamp(1rem, 2.3vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            /* 32px - 40px */
+            margin: 0 0 clamp(2rem, 4vw, 2.5rem) 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-topper {
+            color: var(--physio);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            line-height: 3.5em;
+            text-decoration: none;
+            font-weight: 700;
+            overflow: hidden;
+            width: auto;
+            margin: 0;
+            color: #fff;
+            padding: 0 (48/16rem);
+            border-radius: (100/16rem);
+            overflow: hidden;
+            background-color: var(--physio);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+    
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 0%;
+                background: var(--physioLight);
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+    
+            &:hover {
+                color: #fff;
+            }
+    
+            &:hover:before {
+                width: 100%;
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                /* makes the top of the image start at the top of the parent */
+                object-position: top;
+            }
+        }
+        
+        .cs-hide {
+            display: none;
+        }
+
+        .cs-curve {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #hero-1469 {
+        &:before {
+            background: linear-gradient(89deg, rgba(229, 243, 241, 0.90) 44.46%, rgba(229, 243, 241, 0.00) 78.47%);
+            opacity: 1;
+        }
+        .cs-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            width: 67%;
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .cs-hide {
+            display: block;
+            position: absolute;
+            z-index: 10;
+        }
+
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #hero-1469 {
+        .cs-flower {
+            display: block;
+            left: (-56/16rem);
+            /* 150px - 280px */
+            top: clamp(9.375rem, 10vw, 17.5rem);
+        }
+    }
+}
+
+/* Large Desktop Parallax Effect - 1600px */
+@media only screen and (min-width: 100rem) {
+    #hero-1469 {
+        .cs-background {
+            background: url("/assets/images/hero-y.webp");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            img {
+                display: none;
+            }
+        }
+    }
+}
+    
+/* Larger Desktop - 1800px */
+@media only screen and (min-width: 112.5rem) {
+    #hero-1469 {
+        .cs-bubbles2 {
+            margin-right: (800/16rem);
+            right: 50%;
+            left: auto;
+            top: (210/16rem);
+            bottom: auto;
+        }
+    }
+}
+
+/* Dark Mode - 360px */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-1469 {
+            &:before {
+                background-color: var(--dark);
+                opacity: .94;
+            }
+
+            .cs-title, .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: .8;
+            }
+
+            .cs-curve {
+                path {
+                    fill: #061A28;
+                }
+            }
+        }
+    }
+}
+
+/* Dark Mode - 768px */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-1469 {
+            background-color: var(--dark);
+            &:before {
+                background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 15%,rgba(0,0,0,1) 23%,rgba(0,0,0,0) 100%);
+                opacity: .8;
+            }
+
+            .cs-background {
+                opacity: .2;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---        Content Page        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-2rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes floatAnimation2 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-3rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    #content-page-1535 {
+        padding: var(--sectionPadding);
+        background-color: var(--physioSectionColor);
+        /* clips the wave background from causing overflow issues when it goes off screen */
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 40px - 64px */
+            gap: clamp(2.5rem, 4vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (738/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+    
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: inherit;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+            position: relative;
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        h2 {
+            font-size: (32/16rem);
+            margin-top: (32/16rem);
+        }
+
+        h3 {
+            font-size: (24/16rem);
+            color: var(--physio);
+        }
+
+        h4, h5, h6 {
+            font-size: (20/16rem);
+        }
+
+        .cs-button-solid {
+            margin-bottom: (32/16rem);
+        }
+
+        .cs-no-margin {
+            margin: 0;
+        }
+
+        .cs-color {
+            color: var(--primary);
+        }
+    
+        p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--bodyTextColor);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+
+            a {
+                font-size: inherit;
+                line-height: inherit;
+                text-decoration: underline;
+                color: var(--physio);
+            }
+        }
+
+        ol, ul {
+            padding-left: (24/16rem);
+            margin: 0 0 (32/16rem) 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+        }
+
+        ul {
+            li {
+                list-style: none;
+                color: inherit;
+                position: relative;
+
+                &:before {
+                    /* custom list bullet */
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    background: currentColor;
+                    opacity: 1;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: block;
+                    top: (10/16rem);
+                    left: (-12/16rem);
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cs-image-group {
+            width: (522/16em);
+            height: (540/16em);
+            display: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            border-radius: (40/16em);
+            /* clips the corners of the children around the border radius */
+            overflow: hidden;
+            /* makes it cover the parent dimensions */
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* makes it cover the parent like a backgorund image */
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        .cs-flower {
+            width: (153/16em);
+            height: auto;
+            position: absolute;
+            right: (-32/16em);
+            top: (-36/16em);
+            z-index: 10;
+        }
+
+        .cs-floater {
+            width: (710/16em);
+            height: auto;
+            position: absolute;
+            left: (150/16em);
+            top: (400/16em);
+            z-index: -1;
+            animation-name: floatAnimation2;
+            animation-duration: 14s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #content-page-1535 {
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            width: 60%;
+            max-width: (694/16rem);
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-image-group {
+            font-size:~"min(1.3vw, 1em)";
+            display: block;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+    }
+}
+
+/* Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+    #content-page-1535 {
+
+        .cs-content {
+            width: 53%;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #content-page-1535 {
+            background-color: rgba(0, 0, 0, 0.2);
+            
+            .cs-title, .cs-text, h2, h3, h4, h5, h6, li, p {
+                color: var(--bodyTextColorWhite);
+            }
+            .cs-color, a {
+                color: var(--primaryLight);
+            }
+
+            p, li {
+                color: #ebebeb;
+            }
+
+            .cs-floater {
+                opacity: .1;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-2383 {
+        padding: var(--sectionPadding);
+        background-color: var(--physioSectionColor);
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16em);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-topper {
+            color: var(--physio);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: stretch;
+            /* 16px - 20px */
+            gap: clamp(1rem, 1.8vw, 1.25rem);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-item {
+            text-align: left;
+            list-style: none;
+            width: 100%;
+            max-width: (500/16rem);
+            margin: 0;
+            padding-top: (60/16rem);
+            border-radius: (16/16rem);
+            overflow: hidden;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            display: flex;
+            grid-column: span 12;
+            flex-direction: column;
+            align-items: stretch;
+            position: relative;
+            z-index: 1;
+
+            &.cs-popular {
+                .cs-flex {
+                    border-color: var(--physio);
+                }
+
+                .cs-price {
+                    color: var(--physio);
+                }
+
+                .cs-price-button {
+                    background-color: var(--physio);
+                    color: var(--headerColor);
+                    border: none;
+
+                    &:hover {
+                        color: #fff;
+
+                    }
+                }
+            }
+        }
+
+        .cs-wrapper {
+            height: 100%;
+            /* 24px - 48px top *
+            /* 16px - 48px left & right */
+            padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 5vw, 3rem);
+            border-radius: (16/16rem);
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cs-flex {
+            /* 126px - 170px */
+            min-height: clamp(7.875rem, 10vw, 10.625rem);
+            /* 24px - 32px */
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+            padding-bottom: (24/16rem);
+            border-bottom: 1px solid #D2D8DF;
+        }
+
+        .cs-package {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 1.4vw, 1.25rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 700;
+            margin: 0 0 (8/16rem) 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-price {
+            /* 25px - 39px */
+            font-size: clamp(1.5625rem, 5vw, 2.4375rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 900;
+            margin: 0;
+            color: var(--physio);
+        }
+
+        .cs-desc {
+            /* 14px - 16px */
+            font-size: clamp(.875rem, 5vw, 1rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            font-weight: 400;
+            /* 16px - 24px */
+            margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+            color: var(--bodyTextColor);
+            display: block;
+        }
+
+        .cs-item-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            margin: 0 0 (32/16rem);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            border-radius: (100/16rem);
+            overflow: hidden;
+            background-color: var(--physio);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-price-button {
+            width: 100%;
+            margin-top: auto;
+            background-color: transparent;
+            border: 1px solid var(--physio);
+            color: var(--physio);
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: var(--physio);
+                color: var(--bodyTextColorWhite);
+            }
+
+            &:before {
+                background-color: var(--physio);
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: (268/16rem);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-2383 {
+        .cs-item {
+            grid-column: span 4;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #pricing-2383 {
+            background-color: rgba(0, 0, 0, 0.2);
+
+            .cs-title,
+            .cs-package,
+            .cs-price,
+            .cs-desc, .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text, .cs-desc, .cs-item-text {
+                opacity: 0.8;
+            }
+
+            .cs-wrapper {
+                background-color: var(--dark);
+                position: relative;
+                z-index: 1;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: #000;
+                    opacity: .4;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+
+            .cs-flex {
+                border-color: rgba(255, 255, 255, .2);
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---           why us           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-2377 {
+        padding: var(--sectionPadding);
+        /* 48px - 64px */
+        padding-bottom: clamp(2.5rem, 6vw, 4rem);
+        background-color: var(--physioSectionColor);
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(2.5rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (630/16rem);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .cs-topper {
+            color: var(--physio);
+        }
+
+        .cs-title {
+            max-width: 20ch;
+            margin: 0;
+            /* 24px - 32px */
+            margin-bottom: clamp(1.5rem, 3vw, 2rem);
+            /* 48px - 64px */
+            padding-bottom: clamp(3rem, 6vw, 4rem);
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: '';
+                width: 100vw;
+                height: 1px;
+                background: #D2D8DF;
+                opacity: 1;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            line-height: 3.5em;
+            text-decoration: none;
+            font-weight: 700;
+            overflow: hidden;
+            width: auto;
+            margin: 0;
+            color: #fff;
+            padding: 0 (48/16rem);
+            border-radius: (100/16rem);
+            overflow: hidden;
+            background-color: var(--physio);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+    
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 0%;
+                background: var(--physioLight);
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+    
+            &:hover {
+                color: #fff;
+            }
+    
+            &:hover:before {
+                width: 100%;
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: 90vw;
+            max-height: (400/16rem);
+            border-radius: (16/16rem);
+            /* clips the corners of the img tag */
+            overflow: hidden;
+            display: block;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs-2377 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+        
+        .cs-content {
+            width: 50%;
+            max-width: (586/16rem);
+            padding-bottom: (123/16rem);
+            /* prevents flexbox from squishing it */
+            flex: none;
+            align-self: flex-start;
+        }
+
+        .cs-picture {
+            height: auto;
+            max-height: 100%;
+            order: -1;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbs-2377 {
+            background-color: rgba(0, 0, 0, .2);
+
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-title {
+                &:before {
+                    background-color: #fff;
+                    opacity: .2;
+                }
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+         
+/*-- -------------------------- -->
+<---           why us           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-2377 {
+        padding: var(--sectionPadding);
+        padding-top: 0;
+        background-color: var(--physioSectionColor);
+
+        .cs-container {
+            width: 100%;
+            /* chnages to 1280px at Desktop */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-card-group {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: (20/16rem);
+        }
+
+        .cs-item {
+            width: 100%;
+            text-align: center;
+            list-style: none;
+            margin: 0;
+            /* 16px - 32px */
+            padding: clamp(1rem, 3vw, 2rem);
+            border-radius: (16/16rem);
+            background-color: #fff;
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            grid-column: span 12;
+            grid-row: span 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-icon {
+            /* 80px - 120px */
+            height: clamp(5rem, 9vw, 7.5rem);
+            width: auto;
+            margin-bottom: (32/16rem);
+            display: block;
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: bold;
+            text-align: inherit;
+            margin: 0 0 (12/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            max-width: (450/16rem);
+            margin: 0;
+            padding: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-2377 {
+        .cs-item {
+            grid-column: span 6;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-2377 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-item {
+            grid-column: span 3;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-2377 {
+            background-color: rgba(0, 0, 0, .2);
+
+            .cs-item {
+                background-color: rgba(0, 0, 0, .3);
+            }
+
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---      Call To Action        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cta-2372 {
+        padding: var(--sectionPadding);
+        background-color: var(--physioSectionColor);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            padding: clamp(2rem, 8vw, 3.75rem) clamp(1rem, 6vw, 6.75rem) 0;
+            background-color: #08101A;
+            border-radius: (16/16rem);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (580/16rem);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            text-align: inherit;
+            margin-bottom: (32/16rem);
+            /* 48px - 64px */
+            padding-bottom: clamp(3rem, 6vw, 4rem);
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: '';
+                width: 100vw;
+                height: 1px;
+                background: #D2D8DF;
+                opacity: .2;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            color: var(--bodyTextColorWhite);
+
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            line-height: 3.5em;
+            text-decoration: none;
+            font-weight: 700;
+            overflow: hidden;
+            width: auto;
+            margin: 0;
+            color: #fff;
+            padding: 0 (48/16rem);
+            border-radius: (100/16rem);
+            overflow: hidden;
+            background-color: var(--physio);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+    
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 0%;
+                background: var(--physio);
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+    
+            &:hover {
+                color: #fff;
+            }
+    
+            &:hover:before {
+                width: 100%;
+            }
+        }
+
+        .cs-graphic {
+            width: 100%;
+            max-width: (490/16rem);
+            height: auto;
+            display: block;
+        }
+
+        .cs-floater {
+            width: (851/16rem);
+            height: auto;
+            background-blend-mode: hard-light;
+            opacity: .54;
+            filter: blur(80px);
+            /* prevents the mouse from interacting wiht it */
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+    #cta-2372 {
+        .cs-container {
+            padding-bottom: (60/16rem);
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .cs-content {
+            width: 45vw;
+        }
+
+        .cs-graphic {
+            width: 40vw;
+            position: absolute;
+            bottom: (0/16rem);
+            right: (18/16rem);
+            z-index: 1;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #cta-2372 {
+            background-color: rgba(0, 0, 0, .2);
+            .cs-container {
+                background-color: rgba(0, 0, 0, .6);
+            }
+
+            .cs-floater {
+                opacity: .2;
+            }
+        }
+    }
+}            

@@ -1,7 +1,11 @@
 ---
 title: 'Blog | Code Stitch Web Designs'
 description: 'Meta description for the page'
-permalink: false
+permalink: blog/
+eleventyNavigation:
+    key: News
+    order: 500
+    hideOnDesktop: true
 
 ---
 
@@ -13,6 +17,21 @@ permalink: false
 {% endblock %}
 
 {% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1519">
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/banner-1-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/banner-1.webp">
+        <img decoding="async" src="/assets/images/banner-1.jpg" alt="woman getting a massage" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
    
 
     <!-- ============================================ -->
