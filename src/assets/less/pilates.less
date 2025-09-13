@@ -786,6 +786,19 @@
         .cs-item {
             grid-column: span 4;
         }
+        
+        /* For exactly 2 items, use flexbox approach */
+        .cs-card-group:has(.cs-item:first-child:nth-last-child(2)) {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 1.8vw, 1.25rem);
+        }
+        
+        .cs-item:first-child:nth-last-child(2),
+        .cs-item:last-child:nth-child(2) {
+            grid-column: unset;
+            flex: 0 0 calc(41.67% - 0.625rem); /* Roughly 5/12 of width minus gap */
+        }
     }
 }
 
