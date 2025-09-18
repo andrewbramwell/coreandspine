@@ -1,6 +1,6 @@
 module.exports = {
     "name": "Spine & Core Synergy",
-    "email": "spinecoresynergy@gmail.com",
+    "email": "spineandcore@gmail.com",
     "phoneForTel": "+441296826223",
     "phoneFormatted": "01296 826223",
     "openingHours": "Mon-Fri: 10am-7pm, Sat: 3.30pm-7pm",
