@@ -104,6 +104,14 @@ module.exports = function (eleventyConfig) {
      *  https://moment.github.io/luxon/api-docs/index.html#datetime
      */
     eleventyConfig.addFilter("postDate", filterPostDate);
+    
+    /**
+     *  Convert JavaScript objects to JSON strings for schema markup
+     *  Use - {{ client.schema.business | jsonify | safe }}
+     */
+    eleventyConfig.addFilter("jsonify", function(value) {
+        return JSON.stringify(value, null, 2);
+    });
     /**=====================================================================
                                     END FILTERS
     =======================================================================*/

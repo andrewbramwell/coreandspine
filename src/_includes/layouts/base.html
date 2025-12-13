@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
     <head>
         <!-- Standard meta tags -->
         <meta charset="UTF-8">
@@ -15,8 +14,8 @@
         <meta property="og:description" content="{{ description }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-        <meta property="og:image" content="/assets/images/logo-small.png"/>
-        <meta property="og:image:secure_url" content="/assets/images/logo-small.png"/>
+        <meta property="og:image" content="{{ client.domain }}/assets/images/logo-small.png"/>
+        <meta property="og:image:secure_url" content="{{ client.domain }}/assets/images/logo-small.png"/>
 
         <!--Favicons-->
         <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
@@ -41,6 +40,19 @@
         <link rel="stylesheet" href="/assets/css/dark.css">
         <script defer src="/assets/js/dark.js"></script>
         <script defer src="/assets/js/nav.js"></script>
+
+        <!-- Schema Markup -->
+        {% if client.schema.business %}
+        <script type="application/ld+json">
+{{ client.schema.business | jsonify | safe }}
+        </script>
+        {% endif %}
+
+        {% if client.schema.website %}
+        <script type="application/ld+json">
+{{ client.schema.website | jsonify | safe }}
+        </script>
+        {% endif %}
 
         {% block head %}{% endblock %}
 
